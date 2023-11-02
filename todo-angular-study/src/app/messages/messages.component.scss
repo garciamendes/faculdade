@@ -1,0 +1,40 @@
+content_copy
+/* MessagesComponent's private CSS styles */
+.container_main {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.container_show_and_close {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 250px;
+
+  span {
+    color: #333;
+    font-size: 1.2rem;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+  }
+
+  .clear {
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #333;
+    color: #333;
+    padding: .3rem .5rem;
+    border-radius: 20px;
+    transition: .24s;
+
+    &:hover {
+      background-color: #333;
+      color: white;
+    }
+  }
+}
+
+.container_messages {
+  margin-top: 1rem;
+}

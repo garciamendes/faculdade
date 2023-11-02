@@ -1,0 +1,16 @@
+<div>
+  <input type="text" [(ngModel)]='task' />
+  <!-- <input type="checkbox" [value]='task.isFinished'> -->
+</div>
+
+<button (click)="addItem(task)">Adicionar task</button>
+
+<ul>
+  <li *ngFor="let item of items">
+    <span>{{ item.title }}</span>
+    <input type="checkbox" [checked]="item.isFinished">
+  </li>
+</ul>
+
+<app-messages class="container_main"></app-messages>
+<router-outlet></router-outlet>
