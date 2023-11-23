@@ -31,11 +31,16 @@ export class StockComponent {
     },
   ]
 
+  isAddProduct: boolean = false
+
   @Input() product: IProduct | null = null
   @Output() editProduct = new EventEmitter<IProduct>()
 
-  // constructor(private dialog: MatDialog)
-  newProduct(): void {
 
+
+  newProduct(): void {
+    this.isAddProduct = true
   }
+
+  saveProduct(): void {}
 }

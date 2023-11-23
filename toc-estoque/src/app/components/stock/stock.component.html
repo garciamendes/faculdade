@@ -1,4 +1,4 @@
-<div class="container_list_stock" [ngClass]="{'space_between': products.length > 3}">
+<div class="container_list_stock" [ngClass]="{'space_between': products.length > 3}" *ngIf="!isAddProduct">
   <div class="container_empty" *ngIf="!products.length">
     <span>Nenhum produto cadastrado</span>
   </div>
@@ -8,13 +8,14 @@
   </div>
 </div>
 
-<div class="content_wrapper">
-  <button (click)="newProduct()" mat-button>
-    <mat-icon>add</mat-icon> Novo Produto
-  </button>
+<button class="action_add_product" (click)="newProduct()" mat-button>
+  <mat-icon>add</mat-icon> Novo Produto
+</button>
+
+<!-- <div class="content_wrapper">
 
   <div class="container_wrapper">
     <div class="container">
       ...
     </div>
-</div>
+</div> -->
