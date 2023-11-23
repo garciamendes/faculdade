@@ -1,0 +1,39 @@
+<mat-card class="container_card">
+  <img
+    mat-card-image
+    class="product_image"
+    [src]='product.image'
+    alt="Product image">
+
+  <mat-card-content class="info_product">
+    <div class="container_name_and_stock">
+      <strong>{{ product.title }}</strong>
+
+      <span *ngIf="product.amountStock" class="content_stock">
+        Em estoque: <span class="value_stock">{{ product.amountStock }}</span>
+      </span>
+      <span *ngIf="!product.amountStock" class="content_stock without_stock">
+        Fora de estoque
+      </span>
+    </div>
+
+
+    <div class="container_assessment" *ngIf="product.starAmount">
+      <mat-icon class="icon_start">hotel_class</mat-icon>
+      <span>{{ product.starAmount }} de 5</span>
+    </div>
+    <div class="container_assessment" *ngIf="!product.starAmount">
+      <span>Sem avaliações</span>
+    </div>
+  </mat-card-content>
+
+  <mat-card-actions class="container_actions">
+    <button mat-button class="action_buy_product">Comprar</button>
+
+    <fieldset *ngIf="false">
+      <legend>Área do admin</legend>
+
+      <button mat-button class="action_edit_product">Editar</button>
+    </fieldset>
+  </mat-card-actions>
+</mat-card>

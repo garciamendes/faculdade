@@ -1,0 +1,107 @@
+.container_card {
+  min-height: max-content;
+  min-width: 400px;
+  max-width: 400px;
+  box-shadow: 0px 0px 10px #0e120d48;
+
+  .product_image {
+    background-size: cover;
+    width: 400px;
+    height: 400px;
+  }
+
+  .info_product {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0rem .3rem !important;
+
+    padding-top: .6rem !important;
+
+    .container_name_and_stock {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+
+      width: 100%;
+
+      & > strong {
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: #35313b !important;
+      }
+
+      .content_stock {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        width: max-content;
+        font-size: 1rem;
+
+        &.without_stock {
+          text-decoration: underline;
+          color: #da2644;
+        }
+
+        .value_stock {
+          display: flex;
+          padding: .4rem 1.3rem;
+          border-radius: 30px;
+          width: max-content;
+          background-color: #f3f3f3;
+        }
+      }
+    }
+
+    .container_assessment {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 10px;
+      width: 100%;
+      font-size: 1.2rem;
+      color: #0e120d;
+
+      .icon_start {
+        color: #f6b74b;
+      }
+    }
+  }
+
+  .container_actions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+
+    .action_buy_product {
+      width: 100%;
+      background-color: #5db668;
+      color: #fff;
+      font-size: 1rem;
+    }
+
+    fieldset {
+      margin-top: 1rem;
+      width: 100%;
+      display: flex;
+      padding: .3rem;
+      justify-content: center;
+      align-items: center;
+
+      border: 1px dashed !important;
+
+      legend {
+        background-color: #fff;
+        padding: 0 .4rem;
+      }
+
+      .action_edit_product {
+        font-size: 1rem;
+        width: 95%;
+        background-color: #eb783f;
+        color: #fff;
+      }
+    }
+  }
+}

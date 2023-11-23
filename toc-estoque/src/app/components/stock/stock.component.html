@@ -1,0 +1,20 @@
+<div class="container_list_stock" [ngClass]="{'space_between': products.length > 3}">
+  <div class="container_empty" *ngIf="!products.length">
+    <span>Nenhum produto cadastrado</span>
+  </div>
+
+  <div *ngFor="let product of products">
+    <app-card [product]="product"></app-card>
+  </div>
+</div>
+
+<div class="content_wrapper">
+  <button (click)="newProduct()" mat-button>
+    <mat-icon>add</mat-icon> Novo Produto
+  </button>
+
+  <div class="container_wrapper">
+    <div class="container">
+      ...
+    </div>
+</div>

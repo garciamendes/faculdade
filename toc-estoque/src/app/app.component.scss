@@ -1,0 +1,35 @@
+.container_header_main {
+  position: sticky;
+  top: 0;
+  z-index: 99999;
+  height: 60px !important;
+
+  .container_header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    .info_company {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      .title_company {
+        font-size: 1.2rem;
+      }
+    }
+
+    .container_user {
+
+      .icon_menu {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+.container_stocks {
+  display: flex;
+  height: max-content;
+  padding-bottom: .3rem;
+}
