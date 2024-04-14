@@ -13,7 +13,7 @@ public class App {
 
         Integer sum = 0;
         for (int i : numbers) {
-            sum += i;
+            sum *= i;
         }
 
         System.out.println("A soma dos números informado é: " + sum);
