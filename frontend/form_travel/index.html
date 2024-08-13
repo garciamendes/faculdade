@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./load.css">
+  <link rel="stylesheet" href="./checkbox.css">
+  <link rel="stylesheet" href="./radio.css">
+  <title>Take me to</title>
+</head>
+
+<body onload="initialLoadScript()">
+  <div class="container-root">
+    <main class="hidden-page">
+      <div class="content-side-left">
+        <img class="image-side" src="./side-image.svg" alt="side image">
+      </div>
+
+      <form class="content-form">
+        <fieldset>
+          <legend>Seus dados</legend>
+
+          <div class="self-datas">
+            <div class="content-enter fullscreen">
+              <label for="name">Nome Completo</label>
+              <input type="text" id="name" name="name" placeholder="Ex: Joe Doe" required>
+            </div>
+
+            <div class="content-enter width-100-px">
+              <label for="age">Idade</label>
+              <input type="number" id="age" name="age" placeholder="Ex: 24" min="0" max="99" required>
+            </div>
+          </div>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>Plano de viagem</legend>
+
+          <div class="layout-custom">
+            <div class="main content-enter">
+              <label for="where-to">Para onde</label>
+              <input type="text" id="where-to" name="where-to" placeholder="Buscar destino" required>
+            </div>
+
+            <div class="data-check-in content-enter">
+              <label for="check-in">Check-in</label>
+              <input type="datetime-local" id="check-in" name="check-in" placeholder="Buscar destino" required>
+            </div>
+
+            <div class="data-check-out content-enter">
+              <label for="check-out">Check-out</label>
+              <input type="datetime-local" id="check-out" name="check-out" placeholder="Buscar destino" required>
+            </div>
+
+            <div class="more-info">
+              <div class="content-more-info">
+                <div class="info-checkbox">
+                  <div class="checkbox-wrapper-15">
+                    <input class="inp-cbx" id="has_children" type="checkbox" style="display: none;" />
+                    <label class="cbx" for="has_children">
+                      <span>
+                        <svg width="12px" height="9px" viewbox="0 0 12 9">
+                          <polyline points="1 5 4 8 11 1"></polyline>
+                        </svg>
+                      </span>
+                    </label>
+                  </div>
+                  <span class="flex-center">Tem criança(s) com menos de 5 ano?</span>
+                </div>
+
+                <div class="info-checkbox">
+                  <div class="checkbox-wrapper-15">
+                    <input class="inp-cbx" id="pets" type="checkbox" style="display: none;" />
+                    <label class="cbx" for="pets">
+                      <span>
+                        <svg width="12px" height="9px" viewbox="0 0 12 9">
+                          <polyline points="1 5 4 8 11 1"></polyline>
+                        </svg>
+                      </span>
+                    </label>
+                  </div>
+                  <span class="flex-center">Há pet(s)?</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>Forma de Pagamento</legend>
+
+          <div class="self-datas content-enter">
+            <div class="flex-center fullscreen">
+              <div class="radio-wrapper-5">
+                <label for="credit" class="forCircle">
+                  <input id="credit" type="radio" name="radio-examples">
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 16 16" fill="#6C63FF">
+                      <circle data-name="ellipse" cx="8" cy="8" r="8"></circle>
+                    </svg>
+                  </span>
+                </label>
+                <label for="credit">
+                  Crédito
+                </label>
+              </div>
+              <div class="radio-wrapper-5">
+                <label for="debit" class="forCircle">
+                  <input id="debit" type="radio" name="radio-examples">
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 16 16" fill="#6C63FF">
+                      <circle data-name="ellipse" cx="8" cy="8" r="8"></circle>
+                    </svg>
+                  </span>
+                </label>
+                <label for="debit">
+                  Débito
+                </label>
+              </div>
+              <div class="radio-wrapper-5">
+                <label for="pix" class="forCircle">
+                  <input id="pix" type="radio" name="radio-examples">
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 16 16" fill="#6C63FF">
+                      <circle data-name="ellipse" cx="8" cy="8" r="8"></circle>
+                    </svg>
+                  </span>
+                </label>
+                <label for="pix">
+                  Pix
+                </label>
+              </div>
+            </div>
+
+            <div class="content-enter">
+              <label for="installments">Total de parcelas</label>
+              <select name="installments" id="installments">
+                <option value="-1">Selecione a quantidade de parcelas</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Observações</legend>
+
+          <div class="content-enter fullscreen">
+            <label for="obs">Mencione algo que precisa se atentar</label>
+            <textarea rows="10" id="obs" name="obs" placeholder="Digite suas Observações"></textarea>
+          </div>
+        </fieldset>
+
+        <button type="submit">Comprar plano de viagem</button>
+      </form>
+    </main>
+  </div>
+
+  <script src="./script.js"></script>
+  <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+</body>
+
+</html>

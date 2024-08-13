@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f2f2f2;
+  color: #18181B;
+}
+
+.animation-load-project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.container-root {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 100%;
+  width: 100%;
+  padding: 2rem;
+}
+
+.hidden-page {
+  display: none;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  height: 100%;
+  gap: 50px;
+  width: 100%;
+}
+
+main .content-side-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .content-side-left {
+  flex: 1;
+}
+main .content-side-left .image-side {
+  height: 60%;
+}
+
+.content-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 40%;
+}
+
+fieldset {
+  padding: 1rem;
+  border-radius: 20px;
+  border-width: 1px;
+  transition: all .24s;
+}
+
+legend {
+  padding: 0 .5rem;
+}
+
+.fullscreen {
+  flex: 1 !important;
+}
+
+.self-datas {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.content-enter {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.content-enter input, select, textarea {
+  padding: .6rem .5rem;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #A1A1AA;
+  background-color: #fff;
+  border: 1px solid #fff;
+  resize: none;
+}
+
+fieldset:focus-within, .content-enter input:focus-within {
+  border: 1px solid #6C63FF;
+}
+
+.width-100-px {
+  width: 100px;
+}
+
+.width-150-px {
+  width: 150px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.main {
+	grid-area: main;
+}
+
+.data-check-in {
+	grid-area: data-check-in;
+}
+
+.data-check-out {
+	grid-area: data-check-out;
+}
+
+.more-info {
+	grid-area: more-info;
+}
+.layout-custom {
+  display: grid !important;
+  gap: 10px;
+  grid-template-areas:
+		"main main main"
+		"data-check-in . data-check-out"
+		"more-info more-info more-info"
+		!important;
+}
+
+.content-more-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-checkbox {
+  display: flex;
+  align-content: center !important;
+  gap: 5px;
+}
+
+
+.flex-center {
+  display: flex !important;
+  align-items: center !important;
+}
+
+button {
+  font-size: 1rem;
+  cursor: pointer;
+  color: #fff;
+  background-color: #6C63FF;
+  border: none;
+  border-radius: 20px;
+  padding: 1rem;
+  transition: all .24s;
+}
+
+button:hover {
+  background-color: #3C53C7;
+}
