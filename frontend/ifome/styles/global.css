@@ -1,0 +1,19 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #3D3D3D;
+  color: #fff;
+}
+
+/* .container_main {
+  width: 1200px;
+  margin: auto;
+} */
+
+.img-logo {
+  height: 250px;
+}
+
+.img-about {
+  height: 300px;
+}
