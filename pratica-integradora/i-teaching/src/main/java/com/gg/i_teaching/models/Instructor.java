@@ -6,8 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.Date;
 import java.util.List;
 
 @Entity(name = "instructors")
@@ -22,11 +22,11 @@ public class Instructor {
     private Long id;
 
     @Column(unique = true, length = 45)
-    private Long rg;
+    private int rg;
 
     private String name;
 
-    private Date birth;
+    private LocalDate birth;
 
     private Integer titration;
 
