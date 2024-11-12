@@ -1,5 +1,7 @@
-package com.gg.i_teaching.models;
+package com.gg.i_teaching.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.gg.i_teaching.dto.InstructorDTO;
 import jakarta.persistence.*;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -22,7 +24,7 @@ public class Instructor {
     private Long id;
 
     @Column(unique = true, length = 45)
-    private int rg;
+    private String rg;
 
     private String name;
 
@@ -33,5 +35,13 @@ public class Instructor {
     private LocalDateTime created;
 
     @OneToMany(mappedBy = "instructor")
+    @JsonManagedReference
     private List<Class> classes;
+
+    public Instructor(InstructorDTO data) {
+        this.rg = data.rg();
+        this.name = data.name();
+        this.birth = data.birth();
+        this.titration = data.titration();
+    }
 }

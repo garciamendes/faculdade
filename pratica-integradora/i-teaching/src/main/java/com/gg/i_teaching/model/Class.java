@@ -1,5 +1,7 @@
-package com.gg.i_teaching.models;
+package com.gg.i_teaching.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.gg.i_teaching.dto.ClassDTO;
 import jakarta.persistence.*;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -30,8 +32,16 @@ public class Class {
     private LocalDate end_date;
 
     @ManyToOne
-    @JoinColumn(name = "instrutor_id")
+    @JsonBackReference
     private Instructor instructor;
 
     private LocalDateTime created;
+
+    public Class(ClassDTO data, Instructor instructor) {
+        this.hours = data.hours();
+        this.duration = data.duration();
+        this.start_date = data.startDate();
+        this.end_date = data.endDate();
+        this.instructor = instructor;
+    }
 }
